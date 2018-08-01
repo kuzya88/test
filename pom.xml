@@ -4,28 +4,45 @@
 
     <groupId>com.github.kuzya88</groupId>
     <artifactId>test</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
 
+    <name>Test</name>
+    <description>Test description.</description>
+    <url>https://github.com/kuzya88/test</url>
+
+    <organization>
+        <url>https://github.com/kuzya88/test</url>
+        <name>test</name>
+    </organization>
+    <inceptionYear>2018</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Sergiu Garaba</name>
+            <email>sergiu.garaba@gmail.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/kuzya88/test.git</connection>
+        <developerConnection>scm:git:ssh://github.com/kuzya88/test.git</developerConnection>
+        <url>https://github.com/kuzya88/test</url>
+        <tag>test-1.1</tag>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
-
-   <!-- <parent>
-        <groupId>org.apache</groupId>
-        <artifactId>apache</artifactId>
-        <version>10</version>
-    </parent>
--->
-    <scm>
-        <connection>scm:git:git://github.com/kuzya88/test.git</connection>
-        <developerConnection>scm:git:ssh://github.com/kuzya88/test.git</developerConnection>
-        <url>https://github.com/kuzya88/test</url>
-        <tag>test-1.0</tag>
-    </scm>
 
     <distributionManagement>
         <snapshotRepository>
