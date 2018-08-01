@@ -4,7 +4,7 @@
 
     <groupId>com.github.kuzya88</groupId>
     <artifactId>test</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>Test</name>
