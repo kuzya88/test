@@ -4,7 +4,7 @@
 
     <groupId>com.github.kuzya88</groupId>
     <artifactId>test</artifactId>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
 
@@ -24,7 +24,7 @@
         <connection>scm:git:git://github.com/kuzya88/test.git</connection>
         <developerConnection>scm:git:ssh://github.com/kuzya88/test.git</developerConnection>
         <url>http://github.com/kuzya88/test/tree/master</url>
-        <tag>test-1.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
