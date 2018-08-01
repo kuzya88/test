@@ -4,7 +4,7 @@
 
     <groupId>com.github.kuzya88</groupId>
     <artifactId>test</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
 
@@ -23,8 +23,8 @@
     <scm>
         <connection>scm:git:git://github.com/kuzya88/test.git</connection>
         <developerConnection>scm:git:ssh://github.com/kuzya88/test.git</developerConnection>
-        <url>http://github.com/kuzya88/test/tree/master</url>
-        <tag>HEAD</tag>
+        <url>https://github.com/kuzya88/test</url>
+        <tag>test-1.0</tag>
     </scm>
 
     <distributionManagement>
@@ -46,6 +46,9 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5.3</version>
                 <configuration>
+                    <checkModificationExcludes>
+                        <checkModificationExclude>pom.xml</checkModificationExclude>
+                    </checkModificationExcludes>
                     <localCheckout>true</localCheckout>
                     <pushChanges>false</pushChanges>
                     <mavenExecutorId>forked-path</mavenExecutorId>
@@ -71,9 +74,29 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <configuration>
+                    <useAgent>true</useAgent>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <inherited>true</inherited>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <updateReleaseInfo>true</updateReleaseInfo>
+                </configuration>
+            </plugin>
+            <plugin>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.0.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
